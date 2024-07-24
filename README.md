@@ -17,4 +17,4 @@ Telefonia .. Iphone : Implements
 ReprodutorMusical .. Iphone : Implements
 
 Iphone : +ligarAparelho()
-Iphone : +desligarAparelho()
+Iphone : +desligarAparelho()j
