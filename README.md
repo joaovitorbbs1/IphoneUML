@@ -1,20 +1,36 @@
 classDiagram
 
-ReprodutorMusical : +pausar()
-ReprodutorMusical : +tocar()
-ReprodutorMusical : +selecionarMusica(String nomeDaMusica)
+    class ReprodutorMusical {
+        <<interface>>
+        +tocar()
+        +pausar()
+        +selecionarMusica(String nomeDaMusica)
+    }
+    
+    class Telefonia{
+        <<interface>>
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
 
-Telefonia : +ligar(String numero)
-Telefonia : +atender() 
-Telefonia : +iniciarCorreioVoz()
+    class Browser{
+        <<interface>>
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
 
-Browser : +exibirPagina(String url)
-Browser : +adicionarNovaAba()
-Browser : +atualizarPagina()
+    iPhone ..|> ReprodutorMusical
+    iPhone ..|> AparelhoTelefonico
+    iPhone ..|> NavegadorInternet
 
-Browser .. Iphone : Implements
-Telefonia .. Iphone : Implements
-ReprodutorMusical .. Iphone : Implements
 
-Iphone : +ligarAparelho()
-Iphone : +desligarAparelho()j
+    class Browser{
+        <<classe>>
+        +ligarAparelho()
+        +desligarAparelho()
+    }
+    
+    
+    
